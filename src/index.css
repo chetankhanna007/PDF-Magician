@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-red: #EB1000;
+  --primary-red-hover: #C90E00;
+  --background-main: #FFFFFF;
+  --background-secondary: #F8FAFC;
+  --text-primary: #101B3C;
+  --text-secondary: #526582;
+  --border-light: #E7EAF0;
+  --pdf-card-bg: #FFF0F1;
+  --image-card-bg: #EFF6FF;
+  --text-card-bg: #F5F0FF;
+  --developer-card-bg: #ECFDF5;
+  --converter-card-bg: #FFF7ED;
+  --card-green: #ECFDF5;
+  --card-blue: #EFF6FF;
+  --card-purple: #F5F0FF;
+  --card-orange: #FFF7ED;
+  --card-teal: #E8FAFA;
+  --shadow-soft: 0 3px 12px rgba(15, 23, 42, 0.04);
+  --shadow-hover: 0 10px 24px rgba(15, 23, 42, 0.09);
+  --radius-card: 12px;
+  --radius-button: 8px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-primary);
+  background: var(--background-main);
+}
+
+* { box-sizing: border-box; }
+
+.container-x { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+@media (max-width: 768px) {
+  .container-x { padding: 0 16px; }
+}
