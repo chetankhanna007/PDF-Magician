@@ -38,9 +38,12 @@ export default function PdfToImages() {
       <button onClick={convert} disabled={!file || busy} className="bg-[#EB1000] text-white px-4 py-2 rounded-lg disabled:opacity-50">{busy?'Rendering...':'Convert'}</button>
       <div className="grid grid-cols-2 gap-4 mt-6">
         {images.map((src,i)=>(
-          <div key={i}>
-            <img src={src} alt={`page ${i+1}`} className="border rounded" />
-            <a href={src} download={`page-${i+1}.png`} className="text-sm text-[#EB1000]">Download</a>
+          <div key={i} className="space-y-2">
+            <img src={src} alt={`page ${i+1}`} className="border rounded w-full" />
+            <div className="flex gap-2">
+              <a href={src} target="_blank" rel="noreferrer" className="inline-block bg-[#EB1000] text-white px-3 py-1 rounded text-sm">Preview</a>
+              <a href={src} download={`page-${i+1}.png`} className="inline-block bg-green-600 text-white px-3 py-1 rounded text-sm">Download</a>
+            </div>
           </div>
         ))}
       </div>

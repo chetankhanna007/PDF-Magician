@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/image-tools" element={<CategoryPage category="images" />} />
           <Route path="/text-tools" element={<CategoryPage category="text" />} />
           <Route path="/developer-tools" element={<CategoryPage category="developer" />} />
-          <Route path="/converters" element={<CategoryPage category="converters" />} />
+          <Route path="/qr-code-tools" element={<CategoryPage category="qrcode" />} />
           <Route path="/tools/:slug" element={<ToolPage />} />
           <Route path="/about" element={<InfoPage type="about" />} />
           <Route path="/contact" element={<InfoPage type="contact" />} />

@@ -12,10 +12,10 @@ export default function ToolsPage() {
     return list
   }, [q, cat])
   return (
-    <div className="container-x py-8">
+    <div className="container-x pt-10 pb-8">
       <h1 className="text-2xl font-bold mb-4">All Tools</h1>
-      <div className="flex flex-wrap gap-2 mb-6">
-        {['all','pdf','images','converters','text','developer'].map(c=>(
+      <div className="flex flex-wrap justify-center gap-2 mb-6">
+        {['all','pdf','images','qrcode','text','developer'].map(c=>(
           <button key={c} onClick={()=>setCat(c)} className={`px-4 py-2 rounded-full text-sm border ${cat===c?'bg-[#EB1000] text-white border-[#EB1000]':'bg-white border-[#E7EAF0]'}`}>{c}</button>
         ))}
       </div>

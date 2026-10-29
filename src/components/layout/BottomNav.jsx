@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Home, Grid, Folder, MoreHorizontal } from 'lucide-react'
+import { Home, Grid, Folder, MoreHorizontal, FileText } from 'lucide-react'
 
 export default function BottomNav() {
   const loc = useLocation()
   const items = [
     { to: '/', icon: Home, label: 'Home' },
     { to: '/tools', icon: Grid, label: 'Tools' },
-    { to: '/pdf-tools', icon: Folder, label: 'Categories' },
+    { to: '/pdf-tools', icon: FileText, label: 'PDF Tools' },
     { to: '/about', icon: MoreHorizontal, label: 'More' },
   ]
   return (

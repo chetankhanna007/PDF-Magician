@@ -11,6 +11,7 @@ import PdfToImages from '../tools/pdf/PdfToImages.jsx'
 import ImageCompressor from '../tools/image/ImageCompressor.jsx'
 import ImageResizer from '../tools/image/ImageResizer.jsx'
 import QrCodeGenerator from '../tools/developer/QrCodeGenerator.jsx'
+import QrCodeScanner from '../tools/developer/QrCodeScanner.jsx'
 import WordCounter from '../tools/text/WordCounter.jsx'
 import CaseConverter from '../tools/text/CaseConverter.jsx'
 import JsonFormatter from '../tools/developer/JsonFormatter.jsx'
@@ -26,6 +27,7 @@ const MAP = {
   'image-compressor': ImageCompressor,
   'image-resizer': ImageResizer,
   'qr-code-generator': QrCodeGenerator,
+  'qr-code-scanner': QrCodeScanner,
   'word-counter': WordCounter,
   'case-converter': CaseConverter,
   'json-formatter': JsonFormatter,
@@ -36,14 +38,14 @@ export default function ToolPage() {
   const { slug } = useParams()
   const tool = TOOLS.find(t => t.id === slug)
   const Comp = MAP[slug]
-  if (!tool || !Comp) return <div className="container-x py-8">Tool not found. <Link to="/tools">Back</Link></div>
+  if (!tool || !Comp) return <div className="container-x pt-10 pb-8">Tool not found. <Link to="/tools">Back</Link></div>
   return (
-    <div className="container-x py-8">
+    <div className="container-x pt-10 pb-8">
       <nav className="text-sm text-[#526582] mb-4"><Link to="/">Home</Link> / <Link to="/tools">Tools</Link> / {tool.name}</nav>
       <h1 className="text-2xl font-bold mb-2">{tool.name}</h1>
       <p className="text-[#526582] mb-6">{tool.desc}</p>
       <Comp />
-      <AdSlot />
+      <AdSlot slot="5548706031" label="Advertisement" />
     </div>
   )
 }

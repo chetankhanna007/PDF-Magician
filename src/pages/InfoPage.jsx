@@ -12,7 +12,7 @@ const content = {
 export default function InfoPage({ type }) {
   const c = content[type] || content.about
   return (
-    <div className="container-x py-8 max-w-2xl">
+    <div className="container-x pt-10 pb-8 max-w-2xl min-h-[60vh]">
       <h1 className="text-2xl font-bold mb-4">{c.title}</h1>
       <p className="text-[#526582]">{c.body}</p>
     </div>
